@@ -1,13 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>SmartOnFhirV1</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
-</html>
+<!-- index.html -->
+<script src="./node_module/fhirclient/build/fhir-client.js"></script>
+<script>
+  FHIR.oauth2
+    .ready()
+    .then((client) => client.request("Patient"))
+    .then(console.log)
+    .catch(console.error);
+</script>
