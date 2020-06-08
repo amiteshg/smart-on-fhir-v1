@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head><base href=" https://amiteshg.github.io/smart-on-fhir-v1/">
+    <title>SMART on FHIR</title>
+    <script src="./node_module/fhirclient/build/fhir-client.js"></script>
+    <script>
+      FHIR.oauth2
+        .ready()
+        .then((client) => client.request("Patient"))
+        .then(console.log)
+        .catch(console.error);
+    </script>
+  </head>
+  <body>
+    <div>Index file to test SMART app</div>
+  <script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
+</html>
