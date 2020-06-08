@@ -10,12 +10,13 @@
         <div id="patient">Loading...</div>
     <script>
      FHIR.oauth2.ready().then(function(client) {
-                
+                alert("hi 1");
+                console.log(client);
                 // Render the current patient (or any error)
                 client.patient.read().then(
                     function(pt) {
                         console.log(pt);
-                        alert("hi");
+                        alert("hi 2");
                         document.getElementById("patient").innerText = JSON.stringify(pt, null, 4);
                     },
                     function(error) {
