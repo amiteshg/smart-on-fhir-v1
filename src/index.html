@@ -1,10 +1,16 @@
-<!-- index.html -->
-<script src="./node_module/fhirclient/build/fhir-client.js"></script>
-<script>
-  FHIR.oauth2
-    .ready()
-    .then((client) => client.request("Patient"))
-    .then(console.log)
-    .catch(console.error);
-</script>
-<div>Index file to test SMART app</div>
+<html>
+  <title>SMART on FHIR</title>
+  <head>
+    <script src="./node_module/fhirclient/build/fhir-client.js"></script>
+    <script>
+      FHIR.oauth2
+        .ready()
+        .then((client) => client.request("Patient"))
+        .then(console.log)
+        .catch(console.error);
+    </script>
+  </head>
+</html>
+<body>
+  <div>Index file to test SMART app</div>
+</body>
